@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".DetailHistoryActivity">
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/progress_master"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            style="@style/AVLoadingIndicatorView"
+            android:visibility="visible"
+            app:indicatorName="BallPulseIndicator"
+            app:indicatorColor="@color/colorPrimary"
+            />
+        <TextView
+            android:id="@+id/please_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorText2"
+            android:text="@string/label_please_wait"/>
+        <TextView
+            android:id="@+id/loading_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/please_wait"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorText3"
+            android:text="@string/label_loading_page"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linear_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_10"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinator_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bg_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/bg_no_item_cactus" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_xxlarge"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:lineSpacingExtra="@dimen/spacing_middle"
+                        android:text="There is no data \nAll of your data will appear here"
+                        android:gravity="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_60" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linear_alamat"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Pembeli"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_pembeli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="16dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:background="@drawable/input_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Kurir"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_kurir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="16dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:background="@drawable/input_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/linear_kurir"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/txt_nama_kurir"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kurir :"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spinner_kurir"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/daftar_kurir"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/lnr_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/txt_alamat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Alamat Pengiriman :"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/edt_alamat"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="8dp"
+                android:background="@drawable/input_layout"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:ems="10"
+                android:textSize="16sp"
+                android:hint="Alamat*"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Item :"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="gone"
+            android:padding="8dp"
+            android:id="@+id/rv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

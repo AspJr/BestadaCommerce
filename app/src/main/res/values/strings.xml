@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">BestCommerce</string>
+    <string name="label_inbox">Inbox</string>
+    <string name="label_history">History</string>
+    <string name="label_personal_info">Personal info</string>
+    <string name="label_nama">Nama</string>
+    <string name="label_content_nama">Asep Maulana</string>
+    <string name="label_username">Username</string>
+    <string name="label_content_username">asepmaulana</string>
+    <string name="label_email_profile">Email</string>
+    <string name="label_content_email_profile">asepmaulana7779@gmail.com</string>
+    <string name="label_loading_page">Loading Page</string>
+    <string name="label_please_wait">Please wait</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin
+        \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin
+    </string>
+    <string-array name="daftar_kurir">
+        <item>Andi</item>
+        <item>Bobon</item>
+        <item>Candra</item>
+        <item>Eko</item>
+        <item>Fino</item>
+        <item>Gani</item>
+    </string-array>
+    <string name="logout">Logout</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/keranjang"
+        android:icon="@drawable/ic_baseline_shopping_basket"
+        app:showAsAction="always"
+        android:title="Keranjang" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person"
+        app:showAsAction="always"
+        android:title="Profile" />
+    <item
+        android:visible="false"
+        android:id="@+id/delete_sugar"
+        android:icon="@drawable/ic_baseline_restore_from_trash"
+        app:showAsAction="always"
+        android:title="Delete Sugar" />
+    <item
+        android:visible="false"
+        android:id="@+id/logout"
+        android:title="Logout" />
+</menu>

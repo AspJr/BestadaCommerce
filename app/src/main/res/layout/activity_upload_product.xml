@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".UploadProductActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Nama Produk"
+           android:textAlignment="center"
+           android:textSize="14sp"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+           android:textColor="@color/grey_40"
+           tools:ignore="RtlCompat" />
+
+       <android.support.design.widget.TextInputEditText
+           android:id="@+id/edt_nama_product"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="-4dp"
+           android:layout_marginRight="-4dp"
+           android:inputType="text"
+           android:maxLength="50"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+           android:textColor="@color/blue_600"
+           android:textStyle="bold"
+           android:theme="@style/EditText.Grey" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Jenis Produk"
+           android:textAlignment="center"
+           android:textSize="14sp"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+           android:textColor="@color/grey_40"
+           tools:ignore="RtlCompat" />
+
+       <android.support.design.widget.TextInputEditText
+           android:id="@+id/edt_jenis_produk"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="-4dp"
+           android:layout_marginRight="-4dp"
+           android:inputType="text"
+           android:maxLength="50"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+           android:textColor="@color/blue_600"
+           android:textStyle="bold"
+           android:theme="@style/EditText.Grey" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Deskripsi"
+           android:textAlignment="center"
+           android:textSize="14sp"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+           android:textColor="@color/grey_40"
+           tools:ignore="RtlCompat" />
+
+       <android.support.design.widget.TextInputEditText
+           android:id="@+id/edt_deskripsi"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="-4dp"
+           android:layout_marginRight="-4dp"
+           android:inputType="text"
+           android:maxLength="50"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+           android:textColor="@color/blue_600"
+           android:textStyle="bold"
+           android:theme="@style/EditText.Grey" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Harga"
+           android:textAlignment="center"
+           android:textSize="14sp"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+           android:textColor="@color/grey_40"
+           tools:ignore="RtlCompat" />
+
+       <android.support.design.widget.TextInputEditText
+           android:id="@+id/edt_harga"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="-4dp"
+           android:layout_marginRight="-4dp"
+           android:inputType="numberDecimal"
+           android:maxLength="50"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+           android:textColor="@color/blue_600"
+           android:textStyle="bold"
+           android:theme="@style/EditText.Grey" />
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Stok"
+           android:textAlignment="center"
+           android:textSize="14sp"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+           android:textColor="@color/grey_40"
+           tools:ignore="RtlCompat" />
+
+       <android.support.design.widget.TextInputEditText
+           android:id="@+id/edt_stok"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="-4dp"
+           android:layout_marginRight="-4dp"
+           android:inputType="number"
+           android:maxLength="50"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+           android:textColor="@color/blue_600"
+           android:textStyle="bold"
+           android:theme="@style/EditText.Grey" />
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Foto Produk"
+           android:textAlignment="center"
+           android:textSize="14sp"
+           android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+           android:textColor="@color/grey_40"
+           tools:ignore="RtlCompat" />
+
+        <ImageView
+            android:id="@+id/iv_product"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_baseline_camera"/>
+
+       <View
+           android:layout_width="0dp"
+           android:layout_height="@dimen/spacing_mlarge" />
+
+       <Button
+           android:id="@+id/btn_buka_toko"
+           android:layout_width="match_parent"
+           android:layout_height="55dp"
+           android:layout_marginLeft="-4dp"
+           android:layout_marginRight="-4dp"
+           android:background="@drawable/btn_rounded_primary"
+           android:text="SUBMIT"
+           android:textSize="18dp"
+           android:textAllCaps="false"
+           android:textColor="@android:color/white"
+           android:textStyle="bold" />
+
+   </LinearLayout>
+
+</RelativeLayout>
